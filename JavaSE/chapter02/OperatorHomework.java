@@ -7,21 +7,16 @@ public class OperatorHomework {
 		
 		// System.out.println("Area: " + (pi * radius * radius) + ", Circumference:" + (pi * 2 * radius));
 	// }
-	
-	// public static void main(String[] args) {
-		// int a = 6;
-		// int b = 9;
-		// int c = 10;
+	/*
+	public static void main(String[] args) {
+		int a = 6;
+		int b = 9;
+		int c = 10;
 		
-		// if(a > b && a > c) {
-			// System.out.println("The maxium number: " + a);
-		// } else if(b > a && b > c) {
-			// System.out.println("The maxium number: " + b);
-		// } else if(c > a && c > b){
-			// System.out.println("The maxium number: " + c);
-		// }
-	// }
-	
+		int max = (a > b ? a : b) > c ? (a > b ? a : b) : c;
+		System.out.println(max);
+	}
+	*/
 	//public static void main(String[] args) {
 	// 	int n = 11;
 	// 	if ((n & 1) == 0) {
@@ -29,27 +24,20 @@ public class OperatorHomework {
 	//	}
 	//}
 	
-	/*
+	
 	public static void main(String[] args) {
 		java.util.Scanner sc = new java.util.Scanner(System.in);
 		int num1 = sc.nextInt();
 		int num2 = sc.nextInt();
 		int num3 = sc.nextInt();
-		if (num1 > 0) {
-			if (num2 < 10) {
-				if ((num3 & 1) == 0) {
-					System.out.println("complete all the details");
-				} else {
-					System.out.println("No.3 rule isn't correspond.");
-				}
-			} else {
-				System.out.println("No.2 rule isn't correspond.");
-			}
+		if (num1 > 0 && num2 < 10 && (num3 & 1) == 0) {
+			System.out.println("complete all the details");
 		} else {
-			System.out.println("No.1 rule isn't correspond.");
+			System.out.println("rule isn't all correspond.");
 		}
 	}
-	*/
+	
+	/*
 	public static void main(String[] args) {
 		java.util.Scanner sc = new java.util.Scanner(System.in);
 		System.out.print("Enter a year:> ");
@@ -60,4 +48,5 @@ public class OperatorHomework {
 			System.out.println(year + " is not a leap year.");
 		}
 	}
+	*/
 }
