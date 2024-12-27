@@ -9,20 +9,8 @@ public class MethodTest01 {
 		}
 		System.out.println();
 		
-		Scanner sc = new Scanner(System.in);
-		System.out.print("Enter your username: ");
-		String username = sc.next();
-		System.out.print("Enter your password: ");
-		String password = sc.next();
+		login();
 		
-		while (!login(username, password)) {
-			System.out.println("Wrong username and password! Please entry again!");
-			System.out.print("Enter your username: ");
-			username = sc.next();
-			System.out.print("Enter your password: ");
-			password = sc.next();
-		}
-		System.out.println("Login Success!");
 	}
 	
 	public static boolean isPrimeNumber(int number) {
@@ -34,10 +22,24 @@ public class MethodTest01 {
 		return true;
 	}
 	
-	public static boolean login(String username, String password) {
-		if ("admin".equals(username) && "abc123".equals(password)) {
-			return true;
+	public static void login() {
+		Scanner sc = new Scanner(System.in);
+		while (true) {
+			System.out.print("Enter your username: ");
+			String username = sc.next();
+			System.out.print("Enter your password: ");
+			String password = sc.next();
+			
+			if (checkLogin(username, password))	{
+				System.out.println("Login Success!");
+				return;
+			} else {
+				System.out.println("Wrong username and password! Please entry again!");
+			}
 		}
-		return false;
+	}
+	
+	public static boolean checkLogin(String username, String password) {
+		return "admin".equals(username) && "abc123".equals(password);
 	}
 }
